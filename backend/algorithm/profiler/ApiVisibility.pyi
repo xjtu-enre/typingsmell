@@ -1,0 +1,3 @@
+from algorithm.profiler.main import PairDetector
+
+get_api_visibility:PairDetector

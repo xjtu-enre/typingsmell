@@ -1,0 +1,8 @@
+ENV: production
+DEBUG: false
+TESTING: true
+SECRET_KEY: hR2F8ys6asyrM8rs
+LEVEL: 30
+#SQLALCHEMY_DATABASE_URI: mysql+pymysql://root:2aade5a40483a5e7@zznut.cn:3306/typing
+SQLALCHEMY_DATABASE_URI: mysql+pymysql://root:2565083386@localhost:3306/mytypingdemo
+SQLALCHEMY_TRACK_MODIFICATIONS: false
