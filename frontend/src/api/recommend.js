@@ -5,5 +5,5 @@ export function getRecommend(data) {
 }
 
 export function recommendAfterFetch(data) {
-  return request.post('/project/fetch', data);
+  return request.post('/project/import', data);
 }

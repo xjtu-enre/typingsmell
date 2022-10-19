@@ -40,7 +40,7 @@ class Coverage(db.Model):
     项目类型覆盖率模型
     """
     id = db.Column(db.Integer, autoincrement=True, primary_key=True)
-    project_id = db.Column(db.Integer, db.ForeignKey('project.id'), name="project", nullable=False, primary_key=True)
+    project_id = db.Column(db.Integer, db.ForeignKey('project.id'), name="project_id", nullable=False, primary_key=True)
     loc = db.Column(db.Float, nullable=False, default=0)
     func = db.Column(db.Float, nullable=False, default=0)
     file = db.Column(db.Float, nullable=False, default=0)
@@ -54,7 +54,7 @@ class DiverseUsage(db.Model):
     使用统计模型
     """
     id = db.Column(db.Integer, autoincrement=True, primary_key=True)
-    project_id = db.Column(db.Integer, db.ForeignKey('project.id'), name="project", nullable=False, primary_key=True)
+    project_id = db.Column(db.Integer, db.ForeignKey('project.id'), name="project_id", nullable=False, primary_key=True)
     Optional = db.Column(db.Integer, nullable=False, default=0)
     Any = db.Column(db.Integer, nullable=False, default=0)
     List = db.Column(db.Integer, nullable=False, default=0)
@@ -78,7 +78,7 @@ class Pattern(db.Model):
     stub复杂类型使用情况模型
     """
     id = db.Column(db.Integer, autoincrement=True, primary_key=True)
-    project_id = db.Column(db.Integer, db.ForeignKey('project.id'), name="project", nullable=False, primary_key=True)
+    project_id = db.Column(db.Integer, db.ForeignKey('project.id'), name="project_id", nullable=False, primary_key=True)
     ApiVisibility = db.Column(db.Integer, nullable=False, default=0)
     ExtensionTyping = db.Column(db.Integer, nullable=False, default=0)
     MatchedOverload = db.Column(db.Integer, nullable=False, default=0)
